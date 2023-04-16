@@ -1,0 +1,63 @@
+.cell {
+    font-family: "Permanent Marker", cursive;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333333;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 60px;
+}
+
+body {
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h1 {
+    padding: 30px;
+}
+
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+    border-right: none;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+    border-bottom: none;
+}
+
+
+#whosTurn {
+    padding: 10px;
+
+}
+
+.cell.X, .cell.O {
+	cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

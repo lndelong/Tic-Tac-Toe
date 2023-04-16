@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id='board'>
+        <div class="row text-center">
+            <div class="col">
+                <h1 class="text-center">Tic-Tac-Toe</h1>
+            </div>
+        </div>
+        <table class="table-6 align-middle" vertical-align: middle>
+            <tbody>        
+                         
+                <tr>
+                    <td class="cell" id="0" data-cell><img id="xImage" height="90px" style="display: none;" src="C:\Users\HP\OneDrive\Pictures\web\x.gif" alt="animated gif of X">
+                    <img  id="oImage" height="90px" style="display: none;" src="C:\Users\HP\OneDrive\Pictures\web\o.gif " alt="animated gif of O"></td>
+                    <td class="cell" id="1" data-cell><img id="xImage" height="90px" style="display:none;" src="C:\Users\HP\OneDrive\Pictures\web\x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="C:\Users\HP\OneDrive\Pictures\web\o.gif " alt="animated gif of O"></td>
+                    <td class="cell" id="2" data-cell><img id="xImage" height="90px" style="display:none;" src="C:\Users\HP\OneDrive\Pictures\web\x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="C:\Users\HP\OneDrive\Pictures\web\o.gif " alt="animated gif of O"></td>     
+                </tr>
+                <tr>
+                    <td class="cell" id="3" data-cell><img id="xImage" height="90px" style="display:none;" src="C:\Users\HP\OneDrive\Pictures\web\x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="C:\Users\HP\OneDrive\Pictures\web\o.gif " alt="animated gif of O"></td> 
+                    <td class="cell" id="4" data-cell><img id="xImage" height="90px" style="display:none;" src="C:\Users\HP\OneDrive\Pictures\web\x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="C:\Users\HP\OneDrive\Pictures\web\o.gif " alt="animated gif of O"></td>
+                    <td class="cell" id="5" data-cell><img id="xImage" height="90px" style="display:none;" src="C:\Users\HP\OneDrive\Pictures\web\x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="C:\Users\HP\OneDrive\Pictures\web\o.gif " alt="animated gif of O"></td>                   
+                </tr>
+                <tr>
+                    <td class="cell border-bottom-0" id="6" data-cell><img id="xImage" height="90px" style="display:none;" src="C:\Users\HP\OneDrive\Pictures\web\x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="C:\Users\HP\OneDrive\Pictures\web\o.gif " alt="animated gif of O"></td>
+                    <td class="cell border-bottom-0" id="7" data-cell><img id="xImage" height="90px" style="display:none;" src="C:\Users\HP\OneDrive\Pictures\web\x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="C:\Users\HP\OneDrive\Pictures\web\o.gif " alt="animated gif of O"></td>
+                    <td class="cell border-bottom-0" id="8" data-cell><img id="xImage" height="90px" style="display:none;" src="C:\Users\HP\OneDrive\Pictures\web\x.gif" alt="animated gif of X">
+                        <img id="oImage" height="90px" style="display: none;" src="C:\Users\HP\OneDrive\Pictures\web\o.gif " alt="animated gif of O"></td>                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="whosTurn" id="whosTurn">
+                <h2 class="turnMessage pt-3" id="turnMessage"></h2>
+            </div>
+            <div class="winningMessage show" id="winningMessage">
+                <div id="winningMessageText"></div>
+                <button id="restartButton">Restart</button>
+            </div>
+        </div>
+    </div>
+    </div>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
