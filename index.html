@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="p-3 mb-2 bg-transparent text-body">
 
-    <div class="container" id='board'>
-        <div class="row text-center">
+    <div class="container" id="board">
+        <div class="row text-center ">
             <div class="col">
                 <h1 class="text-center">Tic-Tac-Toe</h1>
             </div>
@@ -47,19 +47,16 @@
         </table>
     </div>
     <div class="row">
-        <div class="col">
-            <div class="whosTurn" id="whosTurn">
-                <h2 class="turnMessage pt-3" id="turnMessage"></h2>
-            </div>
+        <div class="col"><br><br>
+            <button class="m-20" id="restartButton">Restart</button><br><br>
             <div class="winningMessage show" id="winningMessage">
-                <div id="winningMessageText"></div>
-                <button id="restartButton">Restart</button>
+                <div id="winningMessageText"></div>             
             </div>
         </div>
     </div>
     </div>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-<script src="index.js"></script>
+<script src="test.js"></script>
 
 </body>
 </html>

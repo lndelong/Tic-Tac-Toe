@@ -14,17 +14,17 @@ const winningCombo = [
 	[2, 4, 6]
 ];
 
-const cellElements = [document.querySelectorAll(`[class*="cell"]`), ];
+// variables for all needed DOM elements
+const cellElements = Array.from(document.querySelectorAll(`[class*="cell"]`, 'id'));
 const boardElement = document.getElementById('board');
 const winningMessageElement = document.getElementById('winningMessage');
 const restartButton = document.getElementById('restartButton');
 const winningMessageTextElement = document.getElementById('winningMessageText');
 const xImage = document.getElementById('xImage');
 const oImage = document.getElementById('oImage');
-let isPlayerOTurn = false
+let isPlayerOTurn = Boolean
 let currentClass = '';
-
-
+let cellsWithXO = [];
 
 const cellZero = document.getElementById('0')
 const cellOne = document.getElementById('1')
@@ -37,16 +37,11 @@ const cellSeven = document.getElementById('7')
 const cellEight = document.getElementById('8')
 
 
-
 start();
 
-restartButton.addEventListener('click', start)
-
 function start() {
-	let isPlayerOTurn = false;
-	cellElements.forEach(cell => {
-		// cell.classList.remove('X')
-		// cell.classList.remove('O')
+		isPlayerOTurn = false
+		cellElements.forEach(cell => {
 		document.querySelectorAll(`[class*="X"]`).remove;
 		document.querySelectorAll(`[class*="O"]`).remove;
 		cellZero.addEventListener('click', clickCell);
@@ -60,7 +55,7 @@ function start() {
 		cellEight.addEventListener('click', clickCell);
 		// document.getElementById('winningMessage').hidden = True;
 	})
-	//setBoardHoverClass()
+
 	winningMessageElement.classList.remove('show');
 }
 
@@ -75,7 +70,6 @@ function clickCell(e) {
 		endGame(true)
 	} else {
 		swapTurns()
-		//setBoardHoverClass()
 	}
 }
 
@@ -85,14 +79,22 @@ function placeMark(cell, currentClass) {
 	swapTurns();
 }
 
-
+function setBoardHoverClass() {
+	boardElement.classList.remove(playerO)
+	boardElement.classList.remove(playerO)
+	if (isPlayerOTurn) {
+		boardElement.classList.add(playerO)
+	} else {
+		boardElement.classList.add(playerX)
+	}
+}
 
 function checkWin(currentClass) {
-    return winningCombo.some(combination => {
-        return combination.every(index => {
-            return cellElements[index].classList.contains(currentClass)
-        })
-    })
+	return winningCombo.some(combination => {
+		return combination.every(index => {
+			return (cellElements[index].classList.contains(currentClass))
+		})
+	})
 }
 
 function endGame(draw) {
@@ -116,7 +118,6 @@ if (cell.classList.contains('X')) {
  }
 }
 
-
 function setBoardHoverClass(isPlayerOTurn) {
 	boardElement.classList.remove(playerX)
 	boardElement.classList.remove(playerO)
@@ -136,7 +137,10 @@ function isDraw() {
 		}
 	}
 
-	
-	
-		
-	
+function restart() {
+	cell.forEach.classList.remove('X')
+	cell.forEach.forclassList.remove('O')
+}
+
+restartButton.addEventListener('click', restart)
+
